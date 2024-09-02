@@ -10,6 +10,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/41e196d463.js" crossorigin="anonymous"></script>
+
+    <style>
+        @keyframes scrollFade {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            /* Initially hidden */
+            animation: scrollFade 0.8s ease-out forwards;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -24,7 +46,7 @@
         <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -34,18 +56,18 @@
                     </svg>
                 </button>
             </div>
-            <div class="items-center justify-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            <div class="items-center justify-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
                 id="navbar-sticky">
                 <ul
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                     <li>
-                        <a href="#" class="block py-1 px-1 text-white text-xl rounded md:bg-transparent md:p-0"
+                        <a href="#" class="block py-1 px-1 text-white text-lg rounded md:bg-transparent md:p-0"
                             aria-current="page">Home</a>
                     </li>
 
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar1"
-                            class="flex items-center justify-between text-xl w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white  dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            class="flex items-center justify-between text-lg w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white  dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                             Business Solutions
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -81,7 +103,7 @@
 
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar2"
-                            class="flex items-center justify-between text-xl w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            class="flex items-center justify-between text-lg w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                             Home Service
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -117,7 +139,7 @@
 
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar3"
-                            class="flex items-center justify-between text-xl w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            class="flex items-center justify-between text-lg w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                             Cyber Security
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -153,7 +175,7 @@
 
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar4"
-                            class="flex items-center justify-between text-xl w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            class="flex items-center justify-between text-lg w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                             Web Service
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -189,7 +211,7 @@
 
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar5"
-                            class="flex items-center justify-between text-xl w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            class="flex items-center justify-between text-lg w-full py-1 px-1 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                             About
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -223,7 +245,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="block py-1 px-1 text-white text-xl rounded md:bg-transparent md:p-0"
+                        <a href="#" class="block py-1 px-1 text-white text-lg rounded md:bg-transparent md:p-0"
                             aria-current="page">Contact</a>
                     </li>
                 </ul>
@@ -237,19 +259,21 @@
 
     <!-- Hero Section -->
     <section class="mt-16">
-        <div class="flex mx-auto justify-center items-center gap-48">
+        <div class="flex flex-col sm:flex-row mx-auto justify-center items-center p-2 gap-4 xl:gap-48">
             <div>
-                <h3 class="text-6xl font-bold text-[#00324f]">Business Solutions</h3>
-                <p class="mt-8 mb-16 text-2xl font-bold w-[512px]">Helping small & medium businesses do more with <span
-                        class="text-red-600">technology</span></p>
-                <a class="text-2xl font-bold hover:text-red-600" href="">1-877-696-3737 <i
+                <h3 class="text-3xl sm:text-6xl font-bold text-[#00324f]">Nerds On Site</h3>
+                <p class="mt-8 mb-16 text-xl sm:text-2xl font-bold w-[300px] sm:w-[450px]">IT Support for <span
+                        class="text-red-600">Businesses & Homes</span>
+                    Across Canada & the United States</p>
+                <a class="text-2xl font-bold text-[#00324f] hover:text-red-600" href="">1-877-696-3737 <i
                         class="fa-solid fa-phone-flip text-red-600"></i></a> <br>
                 <button class="mt-4 p-2 text-white text-xl bg-red-700 hover:bg-[#02020233]">Book Online
                     Appointment</button>
             </div>
             <div>
-                <img class="rounded-lg"
-                    src="https://www.nerdsonsite.com/wp-content/uploads/2023/01/Business-IT-Solutions-1.png" alt="">
+                <img class="rounded-lg w-[300px] h-[200px] sm:w-[470px] sm:h-[313px]"
+                    src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/Nerds-On-Site-IT-Support-Services.jpg"
+                    alt="">
             </div>
         </div>
     </section>
@@ -257,8 +281,8 @@
 
 
     <!-- Rating & Review -->
-    <section class="mt-20 h-48 bg-red-700 flex justify-center items-center">
-        <div class="flex justify-center items-center gap-32">
+    <section class="mt-20 h-96 lg:h-48 bg-red-700 flex justify-center items-center">
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-32">
             <div class="flex justify-center items-center gap-8">
                 <div>
                     <img class="h-16" src="./images/icon/agency-35-rating-2.webp" alt="">
@@ -294,134 +318,84 @@
 
 
 
+    <!-- IT Support Services -->
+
     <section>
-        <div class="mt-20 flex justify-center items-center gap-32">
-            <!-- Left Side -->
-            <div>
-                <h3 class="text-5xl font-bold text-[#00324f]">Business IT Support</h3>
-                <h4 class="mt-4 text-2xl font-bold text-[#00324f]">Proactive & on-demand IT service for your business.
-                </h4>
-                <p class="mt-10 w-[800px] text-xl text-[#00324f]">Our mission is to provide best-in-class IT solutions
-                    for small and
-                    medium
-                    businesses. We understand the
-                    complexities of running a successful business, so our goal is to ensure that all of your technology
-                    needs are taken care of so that you can focus on doing what you do best – running your business!
-                    <br>
-                    <br>
-                    We offer a wide range of business IT support services, including on-site support, cybersecurity
-                    services, managed it services, cloud services, web services, and IT consulting to keep your business
-                    up
-                    and running. With our managed service packages, we will monitor your digital assets to ensure
-                    preventative maintenance and proactive troubleshooting, keeping your business safe from cyber
-                    threats.
-                    <br>
-                    <br>
-                    Our team of technology experts have extensive experience working with small and medium enterprises
-                    and
-                    takes pride in the excellence of the quality of service we provide to our Clients. We go above and
-                    beyond expectations to ensure that your entire organization has the technical assistance necessary
-                    to
-                    complete their jobs efficiently. Whether you’re looking for help setting up a new system or need
-                    ongoing
-                    assistance with cloud hosting solutions – we can help!
-                </p>
-            </div>
-
-            <!-- Right Side -->
-            <div>
-                <div>
-                    <h3 class="text-xl font-bold text-red-700">Business IT Solutions</h3>
-                    <div class="mt-4 flex flex-col gap-2">
-                        <a class="uppercase font-bold hover:text-red-700" href="">On-Site IT Support <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">Managed IT Services <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">Cloud Services <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">IT Consulting <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-xl font-bold text-red-700">Cybersecurity Services</h3>
-                    <div class="mt-4 flex flex-col gap-2">
-                        <a class="uppercase font-bold hover:text-red-700" href="">Business Cybersecurity <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">SME EDGE Zero Trust <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">Cyber Snapshot <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-xl font-bold text-red-700">Web Services</h3>
-                    <div class="mt-4 flex flex-col gap-2">
-                        <a class="uppercase font-bold hover:text-red-700" href="">Web Development <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">Web Hosting <i
-                                class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-xl font-bold text-red-700">Request IT Service</h3>
-                    <div class="mt-4 flex flex-col gap-2">
-                        <a class="uppercase font-bold hover:text-red-700" href="">Request Service <i
-                                class="fa-solid fa-computer-mouse"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">Book Consultation <i
-                                class="fa-regular fa-calendar-check"></i></a>
-                        <a class="uppercase font-bold hover:text-red-700" href="">1-877-696-3737 <i
-                                class="fa-solid fa-phone-flip"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="mt-20">
-            <div class="flex flex-wrap justify-center items-start gap-10">
-                <!-- On-Site IT Support -->
-                <div class="max-w-xl flex flex-col justify-center items-center">
-                    <img src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/Computer-Help.jpg"
-                        alt="On-Site IT Support" class="w-[410px] h-[250px] rounded-lg object-cover">
-                    <div class="">
+        <h3 class="mt-20 text-3xl sm:text-6xl font-bold text-[#00324f] text-center">IT Support <span
+                class="text-red-700">Services</span></h3>
+        <div class="mt-20 p-6">
+            <div
+                class="container mx-auto flex flex-col xl:grid xl:grid-cols-1 justify-center justify-items-center items-center xl:items-start lg:px-32 gap-10">
+                <!-- Business IT Support -->
+                <div class="zoom-in-on-scroll max-w-xl opacity-0 transform scale-75 transition-transform duration-500">
+                    <img src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/Business-IT-Solutions.jpg"
+                        alt="On-Site IT Support"
+                        class="w-[337px] h-[205px] sm:w-[615px] sm:h-[375px] rounded-lg object-cover">
+                    <div>
                         <div class="flex justify-center mb-4">
-                            <div class="bg-white p-8 rounded-full shadow-md -mt-16">
-                                <img src="./images/icon/NOS-Cyber-5.webp" alt="IT Support Icon" class="w-12 h-12">
+                            <div class="bg-white p-8 rounded-full shadow-md -mt-14 sm:-mt-16">
+                                <img src="./images/icon/NOS-Business-4.webp" alt="IT Support Icon"
+                                    class="w-8 h-8 sm:w-12 sm:h-12">
                             </div>
                         </div>
-                        <h3 class="text-3xl text-center font-semibold text-[#00324f] mb-4">On-Site IT Support</h3>
-                        <p class="w-[530px] text-xl text-[#00324f] mb-4">
-                            Whether you require repair services for your business computers, need help with network
-                            setup and configuration, or need general advice for your technology, our team will provide
-                            the assistance and knowledge you need to get your small business back up and running
-                            smoothly.
-                            <br>
-                            <br>
-                            Our team provides reliable, fast, and affordable services tailored to your business’s unique
-                            needs.
+                        <h3 class="text-3xl text-center font-bold text-[#00324f] mb-4">Business IT Support</h3>
+                        <p class="w-[300px] sm:w-[580px] text-xl text-start text-[#00324f] mb-4">
+                            At Nerds On Site, we are your partner in IT. We understand the unique challenges small and
+                            medium businesses face when it comes to their technology and how important it is for their
+                            success.
+                            <br><br>
+                            Whether you need help securing your business or want to improve your productivity with new
+                            technology, we’re here to support you every step of the way.
                         </p>
-                        <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Request
-                            Service <i class="fa-solid fa-computer-mouse"></i></a>
+                        <div class="flex justify-center">
+                            <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Business Solutions <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home IT Support -->
+                <div class="zoom-in-on-scroll max-w-xl opacity-0 transform scale-75 transition-transform duration-500">
+                    <img src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/Home-IT-Services.jpg"
+                        alt="On-Site IT Support"
+                        class="w-[337px] h-[205px] sm:w-[615px] sm:h-[375px] rounded-lg object-cover">
+                    <div class="">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-white p-8 rounded-full shadow-md -mt-14 sm:-mt-16">
+                                <img src="./images/icon/NOS-Home-8.webp" alt="IT Support Icon" class="w-12 h-12">
+                            </div>
+                        </div>
+                        <h3 class="text-3xl text-center font-bold text-[#00324f] mb-4">Home IT Support</h3>
+                        <p class="w-[300px] sm:w-[580px] text-xl text-[#00324f] mb-4">
+                            We are here to help you with your home technology needs, from fixing your computer to
+                            setting up your home network.
+                            <br><br>
+                            We have helped tens of thousands of homeowners in various ways over the years, and we want
+                            to do the same for you! Let us put our expertise to work and help you get the most out of
+                            your home’s technology.
+                        </p>
+                        <div class="flex justify-center">
+                            <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Home Services <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Cybersecurity Services -->
-                <div class="max-w-xl flex flex-col justify-center items-center">
+                <div
+                    class="zoom-in-on-scroll max-w-xl flex flex-col opacity-0 transform scale-75 transition-transform duration-500">
                     <img src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/Cyber-Security.jpg"
-                        alt="On-Site IT Support" class="w-[410px] h-[250px] rounded-lg object-cover">
+                        alt="On-Site IT Support"
+                        class="w-[337px] h-[205px] sm:w-[615px] sm:h-[375px] rounded-lg object-cover">
                     <div class="">
                         <div class="flex justify-center mb-4">
-                            <div class="bg-white p-8 rounded-full shadow-md -mt-16">
+                            <div class="bg-white p-8 rounded-full shadow-md -mt-14 sm:-mt-16">
                                 <img src="./images/icon/NOS-Local-Graphic-4.webp" alt="IT Support Icon"
                                     class="w-12 h-12">
                             </div>
                         </div>
-                        <h3 class="text-3xl text-center font-semibold text-[#00324f] mb-4">Cybersecurity Services</h3>
-                        <p class="w-[530px] text-xl text-[#00324f] mb-4">
+                        <h3 class="text-3xl text-center font-bold text-[#00324f] mb-4">Cybersecurity Services</h3>
+                        <p class="w-[300px] sm:w-[580px] text-xl text-[#00324f] mb-4">
                             We understand the unique challenges that small and medium businesses face when protecting
                             their data, and our team of experts is dedicated to helping them stay safe online.
                             <br>
@@ -430,14 +404,347 @@
                             and our team of experts can advise and recommend best practices for keeping your business
                             safe from cyber threats.
                         </p>
-                        <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Book Consultation <i class="fa-regular fa-calendar-check"></i></a>
+                        <div class="flex justify-center">
+                            <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Cybersecurity Services <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
                 </div>
 
-            </div>
+                <!-- Web Services -->
+                <div
+                    class="zoom-in-on-scroll max-w-xl flex flex-col opacity-0 transform scale-75 transition-transform duration-500">
+                    <img src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/Web-Services.jpg"
+                        alt="On-Site IT Support"
+                        class="w-[337px] h-[205px] sm:w-[615px] sm:h-[375px] rounded-lg object-cover">
+                    <div class="">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-white p-8 rounded-full shadow-md -mt-14 sm:-mt-16">
+                                <img src="./images/icon/NOS-Local-Graphic-9.webp" alt="IT Support Icon"
+                                    class="w-12 h-12">
+                            </div>
+                        </div>
+                        <h3 class="text-3xl text-center font-bold text-[#00324f] mb-4">Web Services</h3>
+                        <p class="w-[300px] sm:w-[580px] text-xl text-[#00324f] mb-4">
+                            We offer full-service web design, development, marketing and hosting for small and medium
+                            businesses. Our team of designers, developers, and digital marketers have years of
+                            experience in the online world.
+                            <br><br>
+                            Whether you need a new look, some new content, or an entirely new digital marketing
+                            strategy, we understand how to build websites that look good, work great and get clicks,
+                            leads, and sales.
+                        </p>
+                        <div class="flex justify-center">
+                            <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Web Services <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- National IT Support -->
+                <div
+                    class="sm:col-span-2 flex justify-center zoom-in-on-scroll max-w-xl flex flex-col opacity-0 transform scale-75 transition-transform duration-500">
+                    <img src="https://www.nerdsonsite.com/wp-content/uploads/2022/12/National-IT-projects.jpg"
+                        alt="On-Site IT Support"
+                        class="w-[337px] h-[205px] sm:w-[615px] sm:h-[375px] rounded-lg object-cover">
+                    <div class="">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-white p-8 rounded-full shadow-md -mt-14 sm:-mt-16">
+                                <img src="./images/icon/Client-Satisfaction-1.webp" alt="IT Support Icon"
+                                    class="w-12 h-12">
+                            </div>
+                        </div>
+                        <h3 class="text-3xl text-center font-bold text-[#00324f] mb-4">National IT Support</h3>
+                        <p class="w-[300px] sm:w-[580px] text-xl text-[#00324f] mb-4">
+                            We provide end-to-end project management services for organizations requiring on-site
+                            technical support and services at multiple locations across Canada and/or the United States.
+                            <br><br>
+                            We make it easy for multi-location businesses to access the national on-site support they
+                            need when they need it.
+                        </p>
+                        <div class="flex justify-center">
+                            <a href="#" class="uppercase text-sm font-bold hover:text-red-700">Book Consultation <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+
+
+    <!-- Why Choose Nerds On Site -->
+    <section class="mt-20 lg:h-[620px] pt-10 bg-[#002b44]">
+        <h3 class="mt-8 text-3xl sm:text-4xl font-bold text-white text-center">Why Choose Nerds On Site</h3>
+        <p class="mt-2 text-xl font-bold text-white text-center">Client satisfaction always comes first.</p>
+
+        <div class="mt-10 w-1/12 border-2 border-red-700 mx-auto"></div>
+
+        <div class="mt-12 container mx-auto grid grid-cols-1 lg:grid-cols-3 justify-items-center lg:px-12 xl:px-48 gap-8">
+            <div class="flex justify-center items-center bg-[#1a4157] rounded-lg w-[337px] h-[150px] md:w-[283px] md:h-[177px] xl:w-[366px] xl:h-[148px] p-6 gap-4 fade-in">
+                <img class="p-2 h-12 w-12 bg-white rounded-full" src="./images/icon/Nerds-On-Site-London-Tick.webp"
+                    alt="">
+                <h3 class="text-2xl font-bold text-white">Client Satisfaction Always Comes First</h3>
+            </div>
+
+            <div class="flex justify-center items-center bg-[#1a4157] rounded-lg w-[337px] h-[150px] md:w-[283px] md:h-[177px] xl:w-[366px] xl:h-[148px] p-6 gap-4 fade-in">
+                <img class="p-2 h-12 w-12 bg-white rounded-full" src="./images/icon/Nerds-On-Site-London-Tick.webp"
+                    alt="">
+                <h3 class="text-2xl font-bold text-white">Available Everyday, Evenings & Weekends</h3>
+            </div>
+
+            <div class="flex justify-center items-center bg-[#1a4157] rounded-lg w-[337px] h-[150px] md:w-[283px] md:h-[177px] xl:w-[366px] xl:h-[148px] p-6 gap-4 fade-in">
+                <img class="p-2 h-12 w-12 bg-white rounded-full" src="./images/icon/Nerds-On-Site-London-Tick.webp"
+                    alt="">
+                <h3 class="text-2xl font-bold text-white">Local Nerds, Global Team</h3>
+            </div>
+
+            <div class="flex justify-center items-center bg-[#1a4157] rounded-lg w-[337px] h-[150px] md:w-[283px] md:h-[177px] xl:w-[366px] xl:h-[148px] p-6 gap-4 fade-in">
+                <img class="p-2 h-12 w-12 bg-white rounded-full" src="./images/icon/Nerds-On-Site-London-Tick.webp"
+                    alt="">
+                <h3 class="text-2xl font-bold text-white">By The Solution Pricing</h3>
+            </div>
+
+            <div class="flex justify-center items-center bg-[#1a4157] rounded-lg w-[337px] h-[150px] md:w-[283px] md:h-[177px] xl:w-[366px] xl:h-[148px] p-6 gap-4 fade-in">
+                <img class="p-2 h-12 w-12 bg-white rounded-full" src="./images/icon/Nerds-On-Site-London-Tick.webp"
+                    alt="">
+                <h3 class="text-2xl font-bold text-white">We Speak Normal Speak, Not “Nerd Speak”</h3>
+            </div>
+
+            <div class="flex justify-center items-center bg-[#1a4157] rounded-lg w-[337px] h-[150px] md:w-[283px] md:h-[177px] xl:w-[366px] xl:h-[148px] p-6 gap-4 fade-in">
+                <img class="p-2 h-12 w-12 bg-white rounded-full" src="./images/icon/Nerds-On-Site-London-Tick.webp"
+                    alt="">
+                <h3 class="text-2xl font-bold text-white">In-Home & In-Office Service</h3>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Client Reviews -->
+    <!-- <section class="mt-20">
+        <h3 class="mt-8 text-4xl font-bold text-[#00324f] text-center">Client Reviews</h3>
+        <p class="mt-2 text-xl font-semibold text-center">A <span class="text-[#00324f]">96.6%</span> Satisfaction
+            rating based on <span class="text-[#00324f]">101,000 +</span> reviews</p>
+
+        <div class="mt-10 w-1/12 border-2 border-red-700 mx-auto"></div>
+
+        <div class="mt-16 flex justify-center gap-6">
+            <div class="w-[407px] h-[464px] bg-gray-100 p-8 drop-shadow-2xl">
+                <h3 class="text-xl">“Robert was patient and kind (- he’s my hero) I’m a techy-challenged senior) and I
+                    am happy to know
+                    that I can contact him again if I run into issues. Many thanks.
+                    <br><br>
+                    In the past Kai had helped me but when I contacted him and he said he didn’t work with Mac Air but
+                    recommended Robert for which I’m very grateful.”
+                </h3>
+                <div class="mt-10 flex gap-4">
+                    <img class="w-[60px] h-[60px] rounded-full" src="./images/icon/Nerds-on-site-favicon.png.webp"
+                        alt="">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-lg text-[#00324f] font-bold">Marie L.</h3>
+                        <p class="text-lg text-[#00324f] font-semibold">Nerds On Site Client</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-[407px] h-[356px] bg-[#bf0000] rounded p-8 drop-shadow-2xl">
+                <h3 class="text-xl text-white">“Was persistent and came back with a solution after the first visit. Also
+                    provided some helpful tips/advice/re-assurance.
+                    I would definitely recommend Nerds on Site.. I also appreciated the follow contact from Nerds on
+                    Site as well.“
+                </h3>
+                <div class="mt-10 flex gap-4">
+                    <img class="w-[60px] h-[60px] rounded-full" src="./images/icon/Nerds-on-site-favicon.png.webp"
+                        alt="">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-lg text-white font-bold">Marie L.</h3>
+                        <p class="text-lg text-white font-semibold">Nerds On Site Client</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[407px] h-[212px] bg-gray-100 p-8 drop-shadow-2xl">
+                <h3 class="text-xl">“Professional, patient and informative, Michael surpassed my expectations.”</h3>
+                <div class="mt-10 flex gap-4">
+                    <img class="w-[60px] h-[60px] rounded-full" src="./images/icon/Nerds-on-site-favicon.png.webp"
+                        alt="">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-lg text-[#00324f] font-bold">Marie L.</h3>
+                        <p class="text-lg text-[#00324f] font-semibold">Nerds On Site Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-12 flex justify-center">
+            <a class="px-6 py-4 rounded-full bg-red-700 hover:bg-[#002b44] text-white text-lg font-bold" href="">Read
+                More Reviews</a>
+        </div>
+    </section> -->
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <!-- <footer class="mt-16 p-4 bg-red-700 dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl">
+            <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                <div>
+                    <h2 class="mb-6 text-xl font-bold text-white uppercase dark:text-white">
+                        Company Info</h2>
+                    <ul class="text-white dark:text-white text-lg font-bold">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">About Us</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Become a Nerd</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Home Client Reviews</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Business Client Reviews</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Investors</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-xl font-bold text-white uppercase dark:text-white">Help center</h2>
+                    <ul class="text-white dark:text-white text-lg font-bold">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Discord Server</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Twitter</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Facebook</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-xl font-bold text-white uppercase dark:text-white">Legal</h2>
+                    <ul class="text-white dark:text-white text-lg font-bold">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Licensing</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-xl font-bold text-white uppercase dark:text-white">Download</h2>
+                    <ul class="text-white dark:text-white text-lg font-bold">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">iOS</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Android</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Windows</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">MacOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-white sm:text-center dark:text-white">© 2023 <a
+                        href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 8 19">
+                            <path fill-rule="evenodd"
+                                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 21 16">
+                            <path
+                                d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                        </svg>
+                        <span class="sr-only">Discord community</span>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 17">
+                            <path fill-rule="evenodd"
+                                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">GitHub account</span>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Dribbble account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -449,6 +756,49 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+
+    <!-- for It support service zoom-in -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.zoom-in-on-scroll');
+
+            function handleScroll() {
+                elements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        element.classList.add('opacity-100', 'scale-100');
+                        element.classList.remove('opacity-0', 'scale-75');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();  // Trigger on load
+        });
+    </script>
+
+    <!-- Why Choose Nerds On Site -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("scroll-animate");
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1, // Trigger when 10% of the element is visible
+                }
+            );
+
+            document.querySelectorAll(".fade-in").forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>
